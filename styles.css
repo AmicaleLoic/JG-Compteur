@@ -1,0 +1,114 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f0fb; /* Fond rose très pâle */
+    color: #4a4a4a; /* Texte gris foncé, agréable à lire */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #b565a7; /* Couleur prune douce pour les titres */
+}
+
+h2 {
+    text-align: center;
+    color: #b565a7; /* Couleur prune douce pour les titres */
+    margin-top: 20px;
+
+}
+
+#categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.category {
+    background-color: #f3e1f5; /* Fond lilas clair */
+    border-radius: 10px;
+    padding: 15px;
+    width: 25%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre douce */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre plus marquée au survol */
+}
+
+.category-name {
+    display:flex;
+    justify-content:space-between;
+}
+
+button {
+    background-color: #b565a7; /* Bouton prune doux */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9b4c8f; /* Prune un peu plus foncé au survol */
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+#updateMessage {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(181, 101, 167, 0.8); /* Couleur prune translucide */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    font-size: 14px; /* Taille plus petite pour ne pas distraire */
+}
+
+
+
+
+button img {
+    display: block;     /* Faire en sorte que l'image soit affichée comme un bloc */
+    margin: auto;      /* Centrer l'image dans le bouton */
+}
+
+.container-export-reset {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement si nécessaire */
+    ;
+    height: 100px; /* Ajustez la hauteur selon vos besoins */
+    gap: 10px;
+}
+
+#renameButton {
+    padding: 5px; /* Ajustez cette valeur pour modifier la hauteur du bouton */
+    height: auto; /* Assure que la hauteur s'ajuste selon le contenu */
+    border: none; /* Optionnel, pour enlever la bordure si nécessaire */
+    background: transparent; /* Enlever le fond si nécessaire */
+    cursor: pointer; /* Change le curseur en main lors du survol */
+}
+
+.category p {
+    text-align: left; /* Aligne le texte à gauche */
+    margin: 5px 0; /* Ajoute un petit espacement en haut et en bas */
+}
+
+
+.Credits{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}

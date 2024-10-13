@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur.live</title>
+    <link rel="stylesheet" href="styles.css">
+    </script><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@latest"></script> <!-- Pour Date-fns -->
+    
+
+</head>
+<body>
+    <span class="Credits">Créé par Glenn</span>
+    <h1>Compteur Live</h1>
+    <div id="updateMessage">Sauvegarde...ok</div>
+
+
+    <div id="categories">
+        <div class="category" id="category1">
+            <div class ="category-name">
+                <h2 id="category1-name">Catégorie 1</h2>
+                <button id="renameButton" onclick="renameCategory(1)">
+                    <img src="images/rename.png" alt="Renommer" width="20" height="20" />
+                </button>
+            </div>
+            
+            <button onclick="updateCount('category1', 1)">+1</button>
+            <button onclick="updateCount('category1', -1)">-1</button>
+            
+            <p>Présents : <span id="present1">0</span></p>
+            <p>Entrées : <span id="entered1">0</span></p>
+            
+        </div>
+
+        <div class="category" id="category2">
+            <div class ="category-name">
+                <h2 id="category2-name">Catégorie 2</h2>
+                <button id="renameButton" onclick="renameCategory(2)">
+                    <img src="images/rename.png" alt="Renommer" width="20" height="20" />
+                </button>
+            </div>
+            
+            <button onclick="updateCount('category2', 1)">+1</button>
+            <button onclick="updateCount('category2', -1)">-1</button>
+            
+            <p>Présents : <span id="present2">0</span></p>
+            <p>Entrées : <span id="entered2">0</span></p>
+            
+        </div>
+
+        <div class="category" id="category3">
+            <div class ="category-name">
+                <h2 id="category3-name">Catégorie 3</h2>
+                <button id="renameButton" onclick="renameCategory(3)">
+                    <img src="images/rename.png" alt="Renommer" width="20" height="20" />
+                </button>
+            </div>
+            
+            <button onclick="updateCount('category3', 1)">+1</button>
+            <button onclick="updateCount('category3', -1)">-1</button>
+            
+            <p>Présents : <span id="present3">0</span></p>
+            <p>Entrées : <span id="entered3">0</span></p>
+            
+        </div>
+
+        
+    </div>
+
+    <h2>Total présents : <span id="totalPresent">0</span></h2>
+
+     <p></p>
+     
+    <div class ="container-export-reset">
+        <button id="exportButton" onclick="exportToCSV()">
+            <img src="images/share.png" alt="Exporter" width="30" height="30" />
+        </button>
+
+        <button id="resetButton" onclick="resetData()">
+            <img src="images/reset.png" alt="Reset" width="30" height="30" />
+        </button>
+
+        <button id="toggleChartButton" onclick="toggleChart()">
+            <img src="images/stats.png" alt="Afficher/Masquer le Graphique" id="chartIcon" style="width: 24px; height: 24px;">
+        </button>
+        
+
+    </div>
+
+    <div id="chartContainer">
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
